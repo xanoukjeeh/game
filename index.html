@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Narrative Prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="show-frame-numbers">
+    <main class="experience" aria-live="polite">
+      <p class="case-label">CASE FILE / 1994</p>
+      <section class="scene" id="scene">
+        <div class="scene__image" id="sceneImage" role="img" aria-label=""></div>
+        <div class="intertitle" id="intertitle" aria-hidden="true"></div>
+        <p class="frame-number" id="frameNumber" aria-hidden="true"></p>
+        <button class="hotspot" id="hotspot" type="button" aria-label="">
+          <span class="hotspot__cutout" id="hotspotCutout"></span>
+          <span class="hotspot__spark hotspot__spark--one"></span>
+          <span class="hotspot__spark hotspot__spark--two"></span>
+          <span class="hotspot__spark hotspot__spark--three"></span>
+        </button>
+        <span class="cutout-visual" id="cutoutVisual"></span>
+        <div class="transition transition--black" id="transition"></div>
+      </section>
+
+      <aside class="dialogue" id="dialogue" aria-label="Story text">
+        <p class="dialogue__speaker" id="speaker"></p>
+        <p class="dialogue__text" id="dialogueText"></p>
+        <p class="dialogue__hint" id="dialogueHint">Click to complete the thought</p>
+      </aside>
+
+      <audio id="sceneAudio" preload="auto"></audio>
+    </main>
+
+    <script src="./scene-data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
